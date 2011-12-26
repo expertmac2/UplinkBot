@@ -1,7 +1,9 @@
 package tc.net.expertmac2.UplinkBot.registration;
 
 import tc.net.expertmac2.UplinkBot.Bot;
+import java.sql.*;
 
+@SuppressWarnings("unused")
 public class Registration {
 	
 	public void Reg(String[] args, String sender, Bot b) {
@@ -11,8 +13,5 @@ public class Registration {
 			b.sendMessage(sender, "[ERROR] Syntax: !register [desired username] [desired password]"); 
 			return;
 		}
-		
-		
 	}
-
 }

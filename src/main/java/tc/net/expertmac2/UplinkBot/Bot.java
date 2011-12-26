@@ -17,13 +17,15 @@ public class Bot extends PircBot {
 			String sourceHostname, String reason) {
 	}
 	
-	public void onPrivateMessage(String s, String login, String hs, String m) {
-		l.log("INFO", s + " has sent you a PM. Contents: " + m);
+	public void onMessage(String s, String login, String hs, String m) {
 		String margs[] = m.split("\\s");
-		if (!margs[0].startsWith("!")) this.sendMessage(s, "[ERROR] That's not a command. Do you have a ! at the start?"); 
-		else {
-			c.Handler(margs, s, this);
-		}	
+		if (!margs[0].startsWith("!")) {}
+		else { c.Handler(margs, s, this); }
 	}
 	
+	public void onPrivateMessage(String s, String login, String hs, String m) {
+		String margs[] = m.split("\\s");
+		if (!margs[0].startsWith("!")) this.sendMessage(s, "[ERROR] That's not a command. Do you have a ! at the start?"); 
+		else c.Handler(margs, s, this); 	
+	}
 }

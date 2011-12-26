@@ -7,6 +7,7 @@ import tc.net.expertmac2.UplinkBot.registration.Registration;
 public class CommandHandler {
 	
 	private Registration r = new Registration();
+	public String c = "\u0003";
 
 	public void Handler(String[] args, String sender, Bot b) {
 		if (args[0].equals("!register")) {
@@ -26,10 +27,7 @@ public class CommandHandler {
 		}
 	}
 	
-	public String c() {
-		return "\u0003";
+	public void ChanHandler(String[] args, String sender, Bot b) {
+		
 	}
-	
-	
-	
 }
