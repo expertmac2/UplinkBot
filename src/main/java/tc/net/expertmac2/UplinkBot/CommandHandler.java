@@ -27,7 +27,11 @@ public class CommandHandler {
 		}
 	}
 	
-	public void ChanHandler(String[] args, String sender, Bot b) {
-		
+	public void ChanHandler(String[] args, String sender, String c, Bot b) {
+		if (args[0].equals("!info")) {
+			b.sendMessage(c, "Hi " + sender + ".");
+		} else {
+			b.sendMessage(c, "[ERROR] Invalid command. Try !help.");
+		}
 	}
 }
