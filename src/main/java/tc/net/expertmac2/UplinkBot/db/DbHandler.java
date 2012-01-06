@@ -5,14 +5,15 @@ import org.h2.*;
 import tc.net.expertmac2.UplinkBot.ExceptionHandler;
 
 @SuppressWarnings("unused")
-public class DbHandler {
+@Deprecated
+public class DbHandler { // Don't use! This class is replaced by the main bot's class!
 	
 	public ExceptionHandler eh =  new ExceptionHandler();
 	public String action; public boolean running; public String query;
 	Connection c;
 	
 	public DbHandler() {
-		while (running) { // Remember to set it running when the bot starts.
+		while (true) { // Remember to set it running when the bot starts.
 			if (action.equals("connect")) {
 				try {
 					Class.forName("org.h2.Driver");

@@ -27,7 +27,7 @@ public class CommandHandler {
 		}
 	}
 	
-	public void ChanHandler(String[] args, String sender, String c, Bot b) {
+	public void ChanHandler(String[] args, String sender, String c, Bot b) { // c = channel
 		if (args[0].equals("!info")) {
 			b.sendMessage(c, "Hi " + sender + ".");
 		} else {
