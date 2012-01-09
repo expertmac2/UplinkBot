@@ -33,7 +33,7 @@ public class Setup {
 			System.exit(1);
 		}
 		System.out.println("\nDeclaring variables..");
-		String ntwk = null; // Declare and initiate the variables
+		String ntwk = null; // Declare and initialise the variables
 		String nick = null;
 		System.out.println("\n\nInitialization complete.");
 		System.out.print("\n\nEnter your desired network> ");
